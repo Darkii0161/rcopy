@@ -85,6 +85,9 @@ elseif weapon == "Mythril Dagger" then
 elseif weapon == "Fairfrozen" then
     climbBoost = 0.25
     speedBoost = 7
+elseif weapon == "Mythril Church Spear" then
+    climbBoost = 0.25
+    speedBoost = 7
 end
 
 if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") and game.Workspace.Live[Player.Name].Boosts:FindFirstChild("SpeedBoost") then
