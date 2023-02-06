@@ -19,6 +19,15 @@ for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
             findweapon = v:FindFirstChildWhichIsA("MeshPart").Name
         end
     end
+    if findweapon == "LeftCaestus" then
+        findweapon = "Caestus"
+    end
+    if findweapon == "RightCaestus" then
+        findweapon = "Caestus"
+    end
+    if Player.Backpack:FindFirstChild("Dagger") then
+        findweapon = "Dagger"
+    end
     weapon = findweapon
 end
 print("Found Possible weapon")
@@ -60,34 +69,118 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
     end]]
 end
 
-
-if randomcolorChoice == 1 then
-    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(239,184,56)
+if Player.Name == "5Halos" then
+    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
 else
-    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+    if randomcolorChoice == 1 then
+        game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(239,184,56)
+    else
+        game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+    end
 end
 
 
 local climbBoost = 0.2
 local speedBoost = 7
 if weapon == "Rapier" then
-    climbBoost = 0.46
-    speedBoost = 7
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.46
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.46
+    end
+    speedBoost = 7.5
 elseif weapon == "WraithSword" then
-    climbBoost = 0.2
-    speedBoost = 7
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.2
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.2
+    end
+    speedBoost = 7.2
 elseif weapon == "Mythril Sword" then
-    climbBoost = 0.21
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.21
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.21
+    end
     speedBoost = 7
-elseif weapon == "Mythril Dagger" then
-    climbBoost = 0.48
-    speedBoost = 7
+elseif weapon == "Dagger" then
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.48
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.48
+    end
+    speedBoost = 7.5
 elseif weapon == "Fairfrozen" then
-    climbBoost = 0.25
-    speedBoost = 7
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.25
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.25
+    end
+    speedBoost = 7.2
 elseif weapon == "Mythril Church Spear" then
-    climbBoost = 0.25
-    speedBoost = 7
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.25
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.25
+    end
+    speedBoost = 7.2
+elseif weapon == "Caestus" then
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.28
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.28
+    end
+    speedBoost = 7.5
+elseif weapon == "Abyss Greatsword" then
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.21
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.21
+    end
+    speedBoost = 7.2
+elseif weapon == "Hammer" then
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.21
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.21
+    end
+    speedBoost = 7.2
 end
 
 if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") and game.Workspace.Live[Player.Name].Boosts:FindFirstChild("SpeedBoost") then
@@ -144,33 +237,55 @@ for i, v in pairs(game.Workspace.Live:GetChildren())do
 end
 print("Added Seer Passives")
 
-if game.Workspace.Live[Player.Name].Torso:FindFirstChild(weapon) then
+if weapon == "Caestus" then
     print("Found Weapon: "..weapon)
-    game.Workspace.Live[Player.Name].Torso[weapon].Material = "Neon"
+    game.Workspace.Live[Player.Name].Torso["Left"..weapon].Material = "Neon"
+    game.Workspace.Live[Player.Name].Torso["Right"..weapon].Material = "Neon"
     if randomcolorChoice == 1 then
-        game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(goldcolorChange)
+        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(goldcolorChange)
     else
-        game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(purplecolorChange)
+        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(purplecolorChange)
+        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(purplecolorChange)
     end
-    local addpurplightningPrtcl = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
-    addpurplightningPrtcl.Rate = 10
-    addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Torso[weapon]
-    addpurplightningPrtcl.Enabled = true
-    --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
-    --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
-elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild(weapon) then
-    print("Found Weapon: "..weapon)
-    game.Workspace.Live[Player.Name].Hilt[weapon].Material = "Neon"
-    if randomcolorChoice == 1 then
-        game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(goldcolorChange)
-    else
-        game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(purplecolorChange)
+    local addpurplightningPrtcl1 = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
+    addpurplightningPrtcl1.Rate = 10
+    addpurplightningPrtcl1.Parent = game.Workspace.Live[Player.Name].Torso["Left"..weapon]
+    addpurplightningPrtcl1.Enabled = true
+    
+    local addpurplightningPrtcl2 = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
+    addpurplightningPrtcl2.Rate = 10
+    addpurplightningPrtcl2.Parent = game.Workspace.Live[Player.Name].Torso["Right"..weapon]
+    addpurplightningPrtcl2.Enabled = true
+else
+    if game.Workspace.Live[Player.Name].Torso:FindFirstChild(weapon) then
+        print("Found Weapon: "..weapon)
+        game.Workspace.Live[Player.Name].Torso[weapon].Material = "Neon"
+        if randomcolorChoice == 1 then
+            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        else
+            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(purplecolorChange)
+        end
+        local addpurplightningPrtcl = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
+        addpurplightningPrtcl.Rate = 10
+        addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Torso[weapon]
+        addpurplightningPrtcl.Enabled = true
+        --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
+        --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
+    elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild(weapon) then
+        print("Found Weapon: "..weapon)
+        game.Workspace.Live[Player.Name].Hilt[weapon].Material = "Neon"
+        if randomcolorChoice == 1 then
+            game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        else
+            game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(purplecolorChange)
+        end
+        local addpurplightningPrtcl = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
+        addpurplightningPrtcl.Rate = 10
+        addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Hilt[weapon]
+        addpurplightningPrtcl.Enabled = true
+        --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
+        --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
     end
-    local addpurplightningPrtcl = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
-    addpurplightningPrtcl.Rate = 10
-    addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Hilt[weapon]
-    addpurplightningPrtcl.Enabled = true
-    --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
-    --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
 end
 print("Fully Loaded script -- Pot")
