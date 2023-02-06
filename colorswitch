@@ -2,11 +2,40 @@ local Player = game.Players.LocalPlayer
 local goldcolorChange = "Gold"
 local purplecolorChange = "Royal purple"
 
+for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
+    if v.Name == "Torso" then
+        if not v:FindFirstChildWhichIsA("MeshPart") then
+        elseif v:FindFirstChildWhichIsA("MeshPart") then
+            findweapon = v:FindFirstChildWhichIsA("MeshPart").Name
+        end
+    end
+    if v.Name == "Hilt" then
+        if not v:FindFirstChildWhichIsA("MeshPart") then
+        elseif v:FindFirstChildWhichIsA("MeshPart") then
+            findweapon = v:FindFirstChildWhichIsA("MeshPart").Name
+        end
+    end
+    if findweapon == "LeftCaestus" then
+        findweapon = "Caestus"
+    end
+    if findweapon == "RightCaestus" then
+        findweapon = "Caestus"
+    end
+    if Player.Backpack:FindFirstChild("Dagger") then
+        findweapon = "Dagger"
+    end
+    weapon = findweapon
+end
+
 -- Changes the healthbar color depending if the healthbar color is gold or not
-if game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 == Color3.fromRGB(239,184,56) then
-    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+if Player == "5Halos" then
+    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
 else
-    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(239,184,56)
+    if game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 == Color3.fromRGB(239,184,56) then
+        game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(98, 37, 209)
+    else
+        game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(239,184,56)
+    end
 end
 
 -- Changes the scroomhead color depending if the scroomhead color is gold or not
@@ -17,31 +46,27 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("ScroomHead") then
         game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(goldcolorChange)
     end
 end
--- Changes the hammer color depending if the hammer color is gold or not
-if game.Workspace.Live[Player.Name].Torso:FindFirstChild("Hammer") then
-    if game.Workspace.Live[Player.Name].Torso.Hammer.BrickColor == BrickColor.New(goldcolorChange) then
-        game.Workspace.Live[Player.Name].Torso.Hammer.BrickColor = BrickColor.New(purplecolorChange)
+-- Changes the weapon color depending if the weapon color is gold or not
+if weapon == "Caestus" then
+    if game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor == BrickColor.New(goldcolorChange) and game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor == BrickColor.New(goldcolorChange) then
+        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(purplecolorChange)
+        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(purplecolorChange)
     else
-        game.Workspace.Live[Player.Name].Torso.Hammer.BrickColor = BrickColor.New(goldcolorChange)
+        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(goldcolorChange)
+        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(goldcolorChange)
     end
-elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild("Hammer") then
-    if game.Workspace.Live[Player.Name].Hilt.Hammer.BrickColor == BrickColor.New(goldcolorChange) then
-        game.Workspace.Live[Player.Name].Hilt.Hammer.BrickColor = BrickColor.New(purplecolorChange)
-    else
-        game.Workspace.Live[Player.Name].Hilt.Hammer.BrickColor = BrickColor.New(goldcolorChange)
-    end
-end
--- Changes the wraithsword color depending if the wraithsword color is gold or not
-if game.Workspace.Live[Player.Name].Torso:FindFirstChild("WraithSword") then
-    if game.Workspace.Live[Player.Name].Torso.WraithSword.BrickColor == BrickColor.New(goldcolorChange) then
-        game.Workspace.Live[Player.Name].Torso.WraithSword.BrickColor = BrickColor.New(purplecolorChange)
-    else
-        game.Workspace.Live[Player.Name].Torso.WraithSword.BrickColor = BrickColor.New(goldcolorChange)
-    end
-elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild("WraithSword") then
-    if game.Workspace.Live[Player.Name].Hilt.WraithSword.BrickColor == BrickColor.New(goldcolorChange) then
-        game.Workspace.Live[Player.Name].Hilt.WraithSword.BrickColor = BrickColor.New(purplecolorChange)
-    else
-        game.Workspace.Live[Player.Name].Hilt.WraithSword.BrickColor = BrickColor.New(goldcolorChange)
+else
+    if game.Workspace.Live[Player.Name].Torso:FindFirstChild(weapon) then
+        if game.Workspace.Live[Player.Name].Torso[weapon].BrickColor == BrickColor.New(goldcolorChange) then
+            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(purplecolorChange)
+        else
+            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        end
+    elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild(weapon) then
+        if game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor == BrickColor.New(goldcolorChange) then
+            game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(purplecolorChange)
+        else
+            game.Workspace.Live[Player.Name].Hilt[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        end
     end
 end
