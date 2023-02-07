@@ -234,7 +234,7 @@ for i, v in pairs(game.Workspace.Live:GetChildren())do
             v.Head.IntentBillBoard.Enabled = true
         end
         if v:FindFirstChild("Humanoid") then
-            v.Humanoid.HealthDisplayType = "AlwaysOn"
+            v.Humanoid.HealthDisplayType = "DisplayWhenDamaged"
             v.Humanoid.DisplayDistanceType = "Viewer"
         end
     end
