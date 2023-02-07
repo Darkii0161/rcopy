@@ -233,10 +233,10 @@ for i, v in pairs(game.Workspace.Live:GetChildren())do
         if v.Head:FindFirstChild("IntentBillBoard") then
             v.Head.IntentBillBoard.Enabled = true
         end
-        if v:FindFirstChild("Humanoid") then
+        --[[if v:FindFirstChild("Humanoid") then
             v.Humanoid.HealthDisplayType = "DisplayWhenDamaged"
             v.Humanoid.DisplayDistanceType = "Viewer"
-        end
+        end]]
     end
 end
 print("Added Seer Passives")
