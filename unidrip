@@ -81,6 +81,10 @@ else
     end
 end
 
+if Player.Name == "5Halos" then
+    game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
+end
+
 
 local climbBoost = 0.2
 local speedBoost = 7
@@ -281,9 +285,6 @@ else
         addpurplightningPrtcl.Rate = 10
         addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Torso[weapon]
         addpurplightningPrtcl.Enabled = true
-        if Player.Name == "5Halos" then
-            game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
-        end
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
     elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild(weapon) then
@@ -298,9 +299,6 @@ else
         addpurplightningPrtcl.Rate = 10
         addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Hilt[weapon]
         addpurplightningPrtcl.Enabled = true
-        if Player.Name == "5Halos" then
-            game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
-        end
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
     end
