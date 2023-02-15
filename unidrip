@@ -216,10 +216,12 @@ else
     print("Added Boosts")
 end
 
-for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
-    if v.ClassName == "Accessory" then
-        if v:FindFirstChild("Handle") then
-            v.Handle.Transparency = 1
+if Player.Name ~= "5Halos" then
+    for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
+        if v.ClassName == "Accessory" then
+            if v:FindFirstChild("Handle") then
+                v.Handle.Transparency = 1
+            end
         end
     end
 end
