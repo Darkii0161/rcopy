@@ -301,6 +301,8 @@ else
         addpurplightningPrtcl.Enabled = true
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
+    elseif weapon == "Dagger" then
+        print("Found Weapon: "..weapon)
     end
 end
 print("Fully Loaded script -- Pot")
