@@ -71,6 +71,8 @@ end
 
 if Player.Name == "5Halos" then
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
+    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.Stomach.BackgroundColor3 = Color3.fromRGB(255,192,203)
+    game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.ExtraStomach.BackgroundColor3 = Color3.fromRGB(41,21,153)
 else
     if randomcolorChoice == 1 then
         game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(239,184,56)
@@ -263,6 +265,9 @@ if weapon == "Caestus" then
     addpurplightningPrtcl2.Rate = 10
     addpurplightningPrtcl2.Parent = game.Workspace.Live[Player.Name].Torso["Right"..weapon]
     addpurplightningPrtcl2.Enabled = true
+    if Player.Name == "5Halos" then
+        game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
+    end
 else
     if game.Workspace.Live[Player.Name].Torso:FindFirstChild(weapon) then
         print("Found Weapon: "..weapon)
@@ -276,6 +281,9 @@ else
         addpurplightningPrtcl.Rate = 10
         addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Torso[weapon]
         addpurplightningPrtcl.Enabled = true
+        if Player.Name == "5Halos" then
+            game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
+        end
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
     elseif game.Workspace.Live[Player.Name].Hilt:FindFirstChild(weapon) then
@@ -290,6 +298,9 @@ else
         addpurplightningPrtcl.Rate = 10
         addpurplightningPrtcl.Parent = game.Workspace.Live[Player.Name].Hilt[weapon]
         addpurplightningPrtcl.Enabled = true
+        if Player.Name == "5Halos" then
+            game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
+        end
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Rate = 7
         --game.Workspace.Live[Player.Name].HumanoidRootPart.EvilCalmMindParticles.Enabled = true
     end
