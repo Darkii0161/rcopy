@@ -69,6 +69,17 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
     end]]
 end
 
+if game.PlaceId == 10046661315 then
+    game.Workspace.Live[Player.Name].Head.Transparency = 1
+    if game.Workspace.Live[Player.Name].Head:FindFirstChildWhichIsA("Decal") then
+        for i, b in pairs(game.Workspace.Live[Player.Name].Head:GetChildren()) do
+            if b.ClassName == "Decal" then
+                b.Transparency = 1
+            end
+        end
+    end
+end
+
 if Player.Name == "5Halos" then
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.Stomach.BackgroundColor3 = Color3.fromRGB(255,192,203)
