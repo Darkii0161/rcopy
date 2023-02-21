@@ -13,6 +13,8 @@ elseif game.PlaceId == 10046661315 then
     warn('Game: Richest Minion "Gaia"')
 elseif game.PlaceId == 10215650900 then
     warn('Game: Richest Minion "Khei"')
+elseif game.PlaceId == 10787992628 then
+    warn("Game: Bombers Lineage")
 else
     warn("Unknown Rogue Copy Found")
 end
