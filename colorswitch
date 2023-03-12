@@ -28,7 +28,7 @@ for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
 end
 
 -- Changes the healthbar color depending if the healthbar color is gold or not
-if Player == "5Halos" then
+if Player == "5Halos" or Player.Name == "AesticsSnow" then
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.Stomach.BackgroundColor3 = Color3.fromRGB(255,192,203)
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.ExtraStomach.BackgroundColor3 = Color3.fromRGB(41,21,153)
