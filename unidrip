@@ -95,7 +95,7 @@ if game.PlaceId == 10046661315 or game.PlaceId == 10787992628 or game.placeId ==
     end
 end
 
-if Player.Name == "5Halos" then
+if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Slider.BackgroundColor3 = Color3.fromRGB(4,175,236)
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.Stomach.BackgroundColor3 = Color3.fromRGB(255,192,203)
     game.Players[Player.Name].PlayerGui.StatGui.Container.Health.Constitution.Back.ExtraStomach.BackgroundColor3 = Color3.fromRGB(41,21,153)
@@ -107,7 +107,7 @@ else
     end
 end
 
-if Player.Name == "5Halos" then
+if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
     game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
 end
 
@@ -248,7 +248,7 @@ else
     print("Added Boosts")
 end
 
-if Player.Name ~= "5Halos" then
+if Player.Name ~= "5Halos" and Player.Name ~= "AesticsSnow" then
     for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
         if v.ClassName == "Accessory" then
             if v:FindFirstChild("Handle") then
@@ -297,7 +297,7 @@ if weapon == "Caestus" then
     addpurplightningPrtcl2.Rate = 10
     addpurplightningPrtcl2.Parent = game.Workspace.Live[Player.Name].Torso["Right"..weapon]
     addpurplightningPrtcl2.Enabled = true
-    if Player.Name == "5Halos" then
+    if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
         game.Workspace.Live[Player.Name].HumanoidRootPart.BlightParticles.Enabled = true
     end
 else
