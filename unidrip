@@ -215,6 +215,16 @@ elseif weapon == "Hammer" then
         climbBoost = 0.21
     end
     speedBoost = 7.2
+elseif weapon == "" then
+    if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+        if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
+            climbBoost = 0.2
+        else
+            climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+        end
+    else
+        climbBoost = 0.2
+    end
 end
 
 if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") and game.Workspace.Live[Player.Name].Boosts:FindFirstChild("SpeedBoost") then
