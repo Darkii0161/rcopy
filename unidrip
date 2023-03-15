@@ -72,18 +72,22 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("ScroomHead") then
 end
 
 if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
-    game.Workspace.Live[Player.Name].FakeHead.Transparency = 1
-    if game.Workspace.Live[Player.Name].FakeHead:FindFirstChildWhichIsA("Decal") then
-        for i, b in pairs(game.Workspace.Live[Player.Name].FakeHead:GetChildren()) do
-            if b.ClassName == "Decal" then
-                b.Transparency = 1
+    if game.GameId == 3400722193 then
+        game.Workspace.Live[Player.Name].FakeHead.HeadPart.Transparency = 1
+    else
+        game.Workspace.Live[Player.Name].FakeHead.Transparency = 1
+        if game.Workspace.Live[Player.Name].FakeHead:FindFirstChildWhichIsA("Decal") then
+            for i, b in pairs(game.Workspace.Live[Player.Name].FakeHead:GetChildren()) do
+                if b.ClassName == "Decal" then
+                    b.Transparency = 1
+                end
             end
         end
+        --[[local faceDecal = game.Workspace.Live[Player.Name].FakeHead:FindFirstChildWhichIsA("Decal").Name
+        if game.Workspace.Live[Player.Name].FakeHead:FindFirstChild(facedecal) then
+            game.Workspace.Live[Player.Name].FakeHead[facedecal].Transparency = 1
+        end]]
     end
-    --[[local faceDecal = game.Workspace.Live[Player.Name].FakeHead:FindFirstChildWhichIsA("Decal").Name
-    if game.Workspace.Live[Player.Name].FakeHead:FindFirstChild(facedecal) then
-        game.Workspace.Live[Player.Name].FakeHead[facedecal].Transparency = 1
-    end]]
 end
 
 if game.PlaceId == 10046661315 or game.PlaceId == 10787992628 or game.placeId == 12159215859 then
