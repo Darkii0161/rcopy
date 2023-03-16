@@ -42,7 +42,7 @@ for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
     if findweapon == "RightCaestus" then
         findweapon = "Caestus"
     end
-    if Player.Backpack:FindFirstChild("Dagger") then
+    if Player.Backpack:FindFirstChild("Dagger") or Player.Character:FindFirstChild("Dagger") then
         findweapon = "Dagger"
     end
     weapon = findweapon
