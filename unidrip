@@ -70,10 +70,15 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("ScroomHead") then
         game.Workspace.Live[Player.Name].ScroomHead.Transparency = 1
     end
     game.Workspace.Live[Player.Name].ScroomHead.UsePartColor = true
-    if randomcolorChoice == 1 then
-        game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(goldcolorChange)
+    if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
+        game.Workspace.Live[Player.Name].ScroomHead.Material = "Ice"
+        game.Workspace.Live[Player.Name].ScroomHead.Color = Color3.fromRGB(4,175,236)
     else
-        game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(purplecolorChange)
+        if randomcolorChoice == 1 then
+            game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(goldcolorChange)
+        else
+            game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(purplecolorChange)
+        end
     end
 end
 
