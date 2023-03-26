@@ -64,7 +64,11 @@ local function wraithcolorChange()
 end
 
 if game.Workspace.Live[Player.Name]:FindFirstChild("ScroomHead") then
-    game.Workspace.Live[Player.Name].ScroomHead.Transparency = 1
+    if game.Workspace.Live[Player.Name].Race.Value ~= "Scroom" then
+        game.Workspace.Live[Player.Name].ScroomHead.Transparency = 0
+    else
+        game.Workspace.Live[Player.Name].ScroomHead.Transparency = 1
+    end
     game.Workspace.Live[Player.Name].ScroomHead.UsePartColor = true
     if randomcolorChoice == 1 then
         game.Workspace.Live[Player.Name].ScroomHead.BrickColor = BrickColor.New(goldcolorChange)
