@@ -19,6 +19,8 @@ elseif game.PlaceId == 12159215859 then
     warn("Game: Build a Boat")
 elseif game.GameId == 3400722193 then
     warn("Game: Rogue Arena")
+elseif game.GameId == 4505104344 then
+    warn("Game: Cart Ride")
 else
     warn("Unknown Rogue Copy Found")
 end
