@@ -259,6 +259,27 @@ elseif game.Workspace.Live[Player.Name].Boosts:FindFirstChild("SpeedBoost") then
     if weapon == "WraithSword" then
         wraithcolorChange()
     end
+else
+    --//Add SpeedBoost
+    local addnewStat1 = Instance.new("NumberValue")
+    addnewStat1.Name = "SpeedBoost"
+    addnewStat1.Parent = game.Workspace.Live[Player.Name].Boosts
+    local addaccessory1 = Instance.new("Accessory")
+    addaccessory1.Name = "Armor"
+    addaccessory1.Parent = addnewStat1
+    addnewStat1.Value = speedBoost
+    
+    --//Add ClimbBoost
+    local addnewStat2 = Instance.new("NumberValue")
+    addnewStat2.Name = "ClimbBoost"
+    addnewStat2.Parent = game.Workspace.Live[Player.Name].Boosts
+    local addaccessory2 = Instance.new("Accessory")
+    addaccessory2.Name = "Armor"
+    addaccessory2.Parent = addnewStat2
+    addnewStat2.Value = climbBoost
+    if weapon == "WraithSword" then
+        wraithcolorChange()
+    end
 end
 if weapon == "WraithSword" then
     print("Added Boosts and skin color change")
