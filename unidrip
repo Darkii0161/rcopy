@@ -101,7 +101,7 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
     end
 end
 
-if game.PlaceId == 10046661315 or game.PlaceId == 10787992628 or game.placeId == 12159215859 then
+if game.PlaceId == 10046661315 or game.PlaceId == 10787992628 or game.PlaceId == 12159215859 or game.GameId == 4505104344 then
     game.Workspace.Live[Player.Name].Head.Transparency = 1
     if game.Workspace.Live[Player.Name].Head:FindFirstChildWhichIsA("Decal") then
         for i, b in pairs(game.Workspace.Live[Player.Name].Head:GetChildren()) do
