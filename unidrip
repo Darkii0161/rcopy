@@ -290,7 +290,9 @@ else
         wraithcolorChange()
     end
 end
-if weapon == "WraithSword" then
+if weapon == "WraithSword" and (Player.Name == "5Halos" or Player.Name == "AesticsSnow") then
+    print('Added Boosts and no skin color change ("5Halos exe")')
+elseif weapon == "WraithSword" then
     print("Added Boosts and skin color change")
 else
     print("Added Boosts")
@@ -329,12 +331,17 @@ if weapon == "Caestus" then
     print("Found Weapon: "..weapon)
     game.Workspace.Live[Player.Name].Torso["Left"..weapon].Material = "Neon"
     game.Workspace.Live[Player.Name].Torso["Right"..weapon].Material = "Neon"
-    if randomcolorChoice == 1 then
-        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(goldcolorChange)
-        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(goldcolorChange)
+    if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
+        game.Workspace.Live[Player.Name].Torso["Left"..weapon].Color = Color3.fromRGB(4,175,236)
+        game.Workspace.Live[Player.Name].Torso["Right"..weapon].Color = Color3.fromRGB(4,175,236)
     else
-        game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(purplecolorChange)
-        game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(purplecolorChange)
+        if randomcolorChoice == 1 then
+            game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(goldcolorChange)
+            game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(goldcolorChange)
+        else
+            game.Workspace.Live[Player.Name].Torso["Left"..weapon].BrickColor = BrickColor.New(purplecolorChange)
+            game.Workspace.Live[Player.Name].Torso["Right"..weapon].BrickColor = BrickColor.New(purplecolorChange)
+        end
     end
     local addpurplightningPrtcl1 = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
     addpurplightningPrtcl1.Rate = 10
@@ -352,10 +359,14 @@ else
     if game.Workspace.Live[Player.Name].Torso:FindFirstChild(weapon) then
         print("Found Weapon: "..weapon)
         game.Workspace.Live[Player.Name].Torso[weapon].Material = "Neon"
-        if randomcolorChoice == 1 then
-            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(goldcolorChange)
+        if Player.Name == "5Halos" or Player.Name == "AesticsSnow" then
+            game.Workspace.Live[Player.Name].Torso[weapon].Color = Color3.fromRGB(4,175,236)
         else
-            game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(purplecolorChange)
+            if randomcolorChoice == 1 then
+                game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(goldcolorChange)
+            else
+                game.Workspace.Live[Player.Name].Torso[weapon].BrickColor = BrickColor.New(purplecolorChange)
+            end
         end
         local addpurplightningPrtcl = game.Workspace.Live[Player.Name].HumanoidRootPart.GodLightningHum:Clone()
         addpurplightningPrtcl.Rate = 10
