@@ -9,10 +9,8 @@ print("Collecting Info")
 
 if game.PlaceId == 11412701341 then
 	warn("Game: Not Rogue Lineage")
-elseif game.PlaceId == 10046661315 then
-	warn('Game: Richest Minion "Gaia"')
-elseif game.PlaceId == 10215650900 then
-	warn('Game: Richest Minion "Khei"')
+elseif game.GameId == 4769949081 then
+	warn("Game: Richest Minion")
 elseif game.PlaceId == 10787992628 then
 	warn("Game: Bombers Lineage")
 elseif game.PlaceId == 12159215859 then
