@@ -99,7 +99,7 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
 	end
 end
 
-if game.PlaceId == 10046661315 or game.PlaceId == 10215650900 or game.PlaceId == 10787992628 or game.PlaceId == 12159215859 or game.GameId == 4505104344 or game.GameId == 4544356586 then
+if game.PlaceId == 10046661315 or game.PlaceId == 10215650900 or game.PlaceId == 10787992628 or game.PlaceId == 12159215859 or game.GameId == 4505104344 or game.GameId == 4544356586 or game.GameId == 4769949081 then
 	game.Workspace.Live[Player.Name].Head.Transparency = 1
 	if game.Workspace.Live[Player.Name].Head:FindFirstChildWhichIsA("Decal") then
 		for i, b in pairs(game.Workspace.Live[Player.Name].Head:GetChildren()) do
@@ -249,6 +249,10 @@ elseif weapon == "" then
 	else
 		climbBoost = 0.2
 	end
+end
+
+if game.Workspace.Live[Player.Name].Race.Value == "Gaian" then
+	climbBoost = 0.3
 end
 
 if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") and game.Workspace.Live[Player.Name].Boosts:FindFirstChild("SpeedBoost") then
