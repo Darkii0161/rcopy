@@ -47,8 +47,9 @@ for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
 	end
 	if Player.Character:FindFirstChild("Animate") then
 		if Player.Character.Animate.idle:FindFirstChild("Animation2") then
-			Player.Character.Animate.idle.Animation2.Value = "rbxassetid://13761346000"
-			findweapon = "Scythe"
+			if Player.Character.Animate.idle.Animation2.Value = "rbxassetid://13761346000" then
+				findweapon = "Scythe"
+			end
 		end
 	end
 	weapon = findweapon
