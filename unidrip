@@ -45,6 +45,12 @@ for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
 	if Player.Backpack:FindFirstChild("Dagger") or Player.Character:FindFirstChild("Dagger") then
 		findweapon = "Dagger"
 	end
+	if Player.Character:FindFirstChild("Animate") then
+		if Player.Character.Animate.idle:FindFirstChild("Animation2") then
+			Player.Character.Animate.idle.Animation2.Value = "rbxassetid://13761346000"
+			findweapon = "Scythe"
+		end
+	end
 	weapon = findweapon
 end
 print("Found Possible weapon")
@@ -140,7 +146,7 @@ if weapon == "Rapier" then
 		climbBoost = 0.46
 	end
 	speedBoost = 7.8
-elseif weapon == "WraithSword" then
+elseif weapon == "WraithSword" or weapon == "Scythe" then
 	if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
 		if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
 			climbBoost = 0.2
