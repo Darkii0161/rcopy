@@ -184,7 +184,7 @@ elseif weapon == "Mythril Spear" or weapon == "Steel Spear" or weapon == "Bronze
 		climbBoost = 0.21
 	end
 	speedBoost = 7.3
-elseif weapon == "Dagger" then
+elseif weapon == "Dagger" or weapon == "Mythril Dagger" or weapon == "Steel Dagger" or weapon == "Bronze Dagger" then
 	if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
 		if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
 			climbBoost = 0.48
