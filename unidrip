@@ -21,6 +21,8 @@ elseif game.GameId == 4505104344 or game.GameId == 4582120535 then
 	warn("Game: Cart Ride")
 elseif game.GameId == 5575409971 then
 	warn("Game: RLT: Reborn")
+elseif game.GameId == 4652980779 then
+    warn("Game: Rogue Modded")
 else
 	warn("Unknown Rogue Copy Found")
 end
@@ -110,7 +112,7 @@ if game.Workspace.Live[Player.Name]:FindFirstChild("FakeHead") then
 	end
 end
 
-if game.PlaceId == 10046661315 or game.PlaceId == 10215650900 or game.PlaceId == 10787992628 or game.PlaceId == 12159215859 or game.GameId == 4505104344 or game.GameId == 4544356586 or game.GameId == 4769949081 or game.GameId == 5575409971 then
+if game.PlaceId == 10046661315 or game.PlaceId == 10215650900 or game.PlaceId == 10787992628 or game.PlaceId == 12159215859 or game.GameId == 4505104344 or game.GameId == 4544356586 or game.GameId == 4769949081 or game.GameId == 5575409971 or game.GameId == 4652980779 then
 	game.Workspace.Live[Player.Name].Head.Transparency = 1
 	if game.Workspace.Live[Player.Name].Head:FindFirstChildWhichIsA("Decal") then
 		for i, b in pairs(game.Workspace.Live[Player.Name].Head:GetChildren()) do
@@ -338,7 +340,7 @@ else
 	print("Added Boosts")
 end
 
-if Player.Name ~= "5Halos" and Player.Name ~= "AesticsSnow" and Player.Name ~= "IcyTempleFire" then
+if Player.Name ~= "5Halos" and Player.Name ~= "AesticsSnow" and Player.Name ~= "IcyTempleFire" and game.GameId ~= 4652980779 --[[Rogue Lineage Modded]]then
 	for i, v in pairs(game.Workspace.Live[Player.Name]:GetChildren()) do
 		if v.ClassName == "Accessory" then
 			if v:FindFirstChild("Handle") then
@@ -439,4 +441,4 @@ else
 		print("Found Weapon: "..weapon)
 	end
 end
-print("Fully Loaded script -- Pot")
+print("Fully Loaded Uni")
