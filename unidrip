@@ -142,6 +142,11 @@ end
 
 local climbBoost = 0.2
 local speedBoost = 8
+if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
+	if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value >= 0.6 then
+		climbBoost = game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value
+	end
+end
 if weapon == "Rapier" then
 	if game.Workspace.Live[Player.Name].Boosts:FindFirstChild("ClimbBoost") then
 		if game.Workspace.Live[Player.Name].Boosts.ClimbBoost.Value < 0.6 then
